@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#090909" />
+    <meta name="application-name" content="YORFI ÉLITE GOLD CLUB" />
+    <meta name="author" content="YORFI ÉLITE GOLD CLUB" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="description" content="YORFI ÉLITE GOLD CLUB: comunidad de trading enfocada en oro. Contenido educativo, contexto de mercado y análisis sobre XAU/USD." />
+    <link rel="canonical" href="https://yorfielitegoldclub.com/" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="64x64" href="/favicon-64.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:site_name" content="YORFI ÉLITE GOLD CLUB" />
+    <meta property="og:url" content="https://yorfielitegoldclub.com/" />
+    <meta property="og:title" content="YORFI ÉLITE GOLD CLUB | Trading de oro en comunidad" />
+    <meta property="og:description" content="Únete a una comunidad enfocada en el oro y accede a contenido educativo, contexto de mercado y análisis sobre XAU/USD." />
+    <meta property="og:image" content="https://yorfielitegoldclub.com/og-image.jpg" />
+    <meta property="og:image:secure_url" content="https://yorfielitegoldclub.com/og-image.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="YORFI ÉLITE GOLD CLUB junto a la foto de Yorfi y el mensaje Trading de oro, en comunidad." />
+    <meta property="og:logo" content="https://yorfielitegoldclub.com/favicon.svg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="YORFI ÉLITE GOLD CLUB | Trading de oro en comunidad" />
+    <meta name="twitter:description" content="Contenido educativo, contexto de mercado y análisis sobre XAU/USD." />
+    <meta name="twitter:image" content="https://yorfielitegoldclub.com/og-image.jpg" />
+    <meta name="twitter:image:alt" content="YORFI ÉLITE GOLD CLUB y su comunidad de trading de oro XAU/USD." />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "YORFI ÉLITE GOLD CLUB",
+        "url": "https://yorfielitegoldclub.com/",
+        "logo": "https://yorfielitegoldclub.com/favicon.svg",
+        "image": "https://yorfielitegoldclub.com/og-image.jpg",
+        "description": "Comunidad de trading enfocada en oro, con contenido educativo, contexto de mercado y análisis sobre XAU/USD."
+      }
+    </script>
+    <title>YORFI ÉLITE GOLD CLUB | Comunidad de trading de oro</title>
+    <script>
+      if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+    </script>
+    <!-- META PIXEL: reemplaza PIXEL_ID_PENDIENTE con el ID numérico proporcionado por Meta. -->
+    <script>
+      (function (w, d) {
+        var pixelId = 'PIXEL_ID_PENDIENTE';
+        if (!/^\d{10,20}$/.test(pixelId) || w.fbq) return;
+        var f = w.fbq = function () {
+          f.callMethod ? f.callMethod.apply(f, arguments) : f.queue.push(arguments);
+        };
+        if (!w._fbq) w._fbq = f;
+        f.push = f;
+        f.loaded = true;
+        f.version = '2.0';
+        f.queue = [];
+        var script = d.createElement('script');
+        script.async = true;
+        script.src = 'https://connect.facebook.net/en_US/fbevents.js';
+        var firstScript = d.getElementsByTagName('script')[0];
+        firstScript.parentNode.insertBefore(script, firstScript);
+        w.__yorfiPixelEvents = new Set();
+        w.__yorfiPixelReady = true;
+        f('init', pixelId);
+        f('track', 'PageView');
+        w.__yorfiPixelEvents.add('PageView');
+      })(window, document);
+    </script>
+  </head>
+  <body>
+    <!-- META PIXEL NOSCRIPT: al activar el píxel, reemplaza el src por
+         https://www.facebook.com/tr?id=PIXEL_ID_PENDIENTE&ev=PageView&noscript=1
+         usando el mismo ID numérico del script anterior. -->
+    <noscript><img height="1" width="1" style="display:none" alt="" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" /></noscript>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

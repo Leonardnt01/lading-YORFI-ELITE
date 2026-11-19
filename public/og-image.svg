@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff0ae"/>
+      <stop offset=".48" stop-color="#ffd21a"/>
+      <stop offset="1" stop-color="#b58a16"/>
+    </linearGradient>
+    <linearGradient id="shade" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#0c0c0c" offset="0"/>
+      <stop stop-color="#0c0c0c" offset=".56"/>
+      <stop stop-color="#0c0c0c" stop-opacity=".08" offset="1"/>
+    </linearGradient>
+    <pattern id="grid" width="55" height="55" patternUnits="userSpaceOnUse">
+      <path d="M55 0H0V55" fill="none" stroke="#252525" stroke-width="1"/>
+    </pattern>
+    <clipPath id="photo"><rect x="735" y="0" width="465" height="630"/></clipPath>
+  </defs>
+  <rect width="1200" height="630" fill="#0c0c0c"/>
+  <image href="yorfi-portrait.webp" x="735" y="0" width="465" height="630" preserveAspectRatio="xMidYMid slice" clip-path="url(#photo)"/>
+  <rect width="1200" height="630" fill="url(#shade)"/>
+  <rect width="1200" height="630" fill="url(#grid)" opacity=".72"/>
+  <rect x="66" y="54" width="62" height="62" rx="12" fill="#171607" stroke="#806b11" stroke-width="2"/>
+  <text x="97" y="101" fill="url(#gold)" font-family="Georgia,serif" font-weight="700" font-size="46" text-anchor="middle">Y</text>
+  <text x="151" y="81" fill="#f7f3e8" font-family="Georgia,serif" font-weight="700" font-size="21" letter-spacing="2">YORFI ÉLITE</text>
+  <text x="151" y="108" fill="#d2c9ad" font-family="Georgia,serif" font-weight="700" font-size="19" letter-spacing="2">GOLD CLUB</text>
+  <path d="M68 178h32" stroke="#ffd21a" stroke-width="2"/>
+  <text x="116" y="184" fill="#ffd21a" font-family="Arial,sans-serif" font-size="15" font-weight="700" letter-spacing="3">COMUNIDAD DE TRADING XAU/USD</text>
+  <text x="66" y="292" fill="#f8f6f0" font-family="Georgia,serif" font-size="78" font-weight="700" letter-spacing="-2">TRADING DE ORO,</text>
+  <text x="66" y="390" fill="url(#gold)" font-family="Georgia,serif" font-size="92" font-weight="700" letter-spacing="-2">EN COMUNIDAD.</text>
+  <path d="M68 427h590" stroke="#766111" stroke-width="1"/>
+  <text x="68" y="477" fill="#c6c6c6" font-family="Arial,sans-serif" font-size="24">Contenido educativo, contexto de mercado</text>
+  <text x="68" y="513" fill="#c6c6c6" font-family="Arial,sans-serif" font-size="24">y análisis sobre XAU/USD.</text>
+  <rect x="68" y="550" width="236" height="50" rx="12" fill="#ffd21a"/>
+  <text x="186" y="582" fill="#0c0c0c" font-family="Arial,sans-serif" font-size="18" font-weight="700" text-anchor="middle">YORFIELITEGOLDCLUB.COM</text>
+</svg>
