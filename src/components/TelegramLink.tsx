@@ -1,4 +1,4 @@
-import { ArrowLeft, Send } from 'lucide-react'
+import { ArrowRight, Send } from 'lucide-react'
 import { trackLead } from '../lib/pixel'
 
 const TELEGRAM_URL = 'https://t.me/m/WmHsf5hwZmMx'
@@ -21,8 +21,8 @@ export function TelegramLink({ section, buttonId, children = 'Unirme en Telegram
     >
       <Send size={19} strokeWidth={2.2} aria-hidden="true" />
       <span>{children}</span>
-      <span className="telegram-press" aria-hidden="true">
-        <ArrowLeft size={22} strokeWidth={2.6} />
+      <span className="telegram-circle" aria-hidden="true">
+        <ArrowRight size={20} strokeWidth={2.4} />
       </span>
     </a>
   )

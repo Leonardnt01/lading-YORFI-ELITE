@@ -151,23 +151,31 @@ a:focus-visible { outline: 3px solid #fff; outline-offset: 5px; border-radius: 5
   font-size: clamp(17px, 1.45vw + 2px, 20px); line-height: 1.8;
 }
 .hero-action { display: flex; align-items: center; flex-wrap: wrap; gap: 17px; margin-top: 34px; }
+/* Botón de Telegram: pastilla dorada, relleno negro que barre al pasar el cursor e ícono circular */
 .telegram-link {
-  display: inline-flex; align-items: center; justify-content: center; gap: 14px;
-  min-height: 68px; padding: 0 30px; border-radius: 14px;
-  background: var(--gold); box-shadow: 0 10px 38px #ffd21a21, inset 0 -3px 0 #b88f0d;
-  color: #0b0b0b; font-size: 19px; font-weight: 800; line-height: 1.2; letter-spacing: .01em;
-  text-decoration: none; transition: background .18s ease, transform .18s ease, box-shadow .18s ease;
+  position: relative; isolation: isolate; overflow: hidden;
+  display: inline-flex; align-items: center; justify-content: flex-start; gap: 14px;
+  min-height: 68px; padding: 0 9px 0 28px; border: 2px solid var(--gold); border-radius: 999px;
+  background: var(--gold); color: #0b0b0b;
+  font-size: 19px; font-weight: 800; line-height: 1.2; letter-spacing: .01em;
+  text-decoration: none; box-shadow: 0 10px 38px #ffd21a21;
+  transition: color .5s ease, box-shadow .3s ease, transform .3s ease;
 }
-.telegram-link { padding: 0 26px 0 30px; justify-content: flex-start; }
-.telegram-link > svg:first-child { flex: none; }
-.telegram-link > span:not(.telegram-press) { flex: none; white-space: nowrap; }
-/* Flecha hacia la izquierda que se desplaza de izquierda a derecha, como si se presionara el botón */
-.telegram-press { display: inline-flex; margin-left: auto; animation: press-slide 1.4s ease-in-out infinite alternate; }
-@keyframes press-slide {
-  from { transform: translateX(-6px); }
-  to { transform: translateX(6px); }
+.telegram-link > svg:first-child, .telegram-link > span:not(.telegram-circle) { flex: none; white-space: nowrap; }
+.telegram-link::before {
+  content: ""; position: absolute; z-index: -1; inset: 0; border-radius: inherit;
+  background: #0c0c0c; transform: translateX(-101%);
+  transition: transform .6s cubic-bezier(.6, 0, .2, 1);
 }
-.telegram-link:hover { background: #ffe14d; box-shadow: 0 12px 45px #ffd21a38; transform: translateY(-2px); }
+.telegram-circle {
+  display: grid; place-items: center; flex: none; width: 42px; height: 42px; margin-left: auto;
+  border: 2px solid #0b0b0b; border-radius: 50%; color: #0b0b0b;
+  transform: rotate(-45deg);
+  transition: transform .4s ease, background-color .4s ease, border-color .4s ease, color .4s ease;
+}
+.telegram-link:hover { color: var(--gold); box-shadow: 0 12px 45px #ffd21a38; transform: translateY(-2px); }
+.telegram-link:hover::before { transform: translateX(0); }
+.telegram-link:hover .telegram-circle { transform: rotate(0deg); background: var(--gold); border-color: var(--gold); color: #0c0c0c; }
 .telegram-link:active { transform: translateY(0); }
 .telegram-link:focus-visible { outline-color: #fff; outline-offset: 4px; }
 .action-note { color: #a8a8a8; font-size: 15px; line-height: 1.5; }
@@ -243,7 +251,9 @@ a:focus-visible { outline: 3px solid #fff; outline-offset: 5px; border-radius: 5
 .media-copy { display: flex; flex-direction: column; align-items: center; max-width: 710px; text-align: center; }
 .section-kicker { margin: 0 0 16px; }
 .media-copy h2 { margin: 0 0 18px; font-family: "Cinzel Variable", Georgia, serif; font-size: clamp(2.8rem, 9vw, 5rem); font-weight: 800; line-height: 1; letter-spacing: -.04em; }
-.media-copy > p:not(.section-kicker) { max-width: 650px; margin: 0; color: #d0d0d0; font-size: clamp(17px, 2vw, 21px); line-height: 1.7; }
+.media-copy > p:not(.section-kicker) { max-width: 560px; margin: 0; color: #d0d0d0; font-size: clamp(16px, 1.5vw, 18px); line-height: 1.65; }
+.media-copy > p + p { margin-top: 14px; }
+.media-copy > .telegram-link { margin-top: 36px; }
 
 .features-section { background: transparent; }
 .feature-grid { display: grid; gap: 28px; padding-block: 55px 42px; }
@@ -311,8 +321,14 @@ a:focus-visible { outline: 3px solid #fff; outline-offset: 5px; border-radius: 5
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .telegram-link { transition: none; }
-  .ticker-track, .telegram-press { animation: none; }
+  .telegram-link, .telegram-link::before, .telegram-circle { transition: none; }
+  .ticker-track { animation: none; }
   .hero-copy .eyebrow, .hero-copy h1, .hero-description, .hero-action { animation: none; }
   .eclipse, .eclipse-glow, .hero-video-frame, .hero-video-frame .intro-video { animation: none; }
 }
+
+.results-carousel { overflow: hidden; padding: 28px 0; border-block: 1px solid #292411; background: #10100e; }
+.carousel-track { display: flex; gap: 16px; width: max-content; animation: carousel-slide 45s linear infinite; }
+.carousel-track img { display: block; width: auto; height: clamp(240px, 32vw, 380px); flex: none; border: 1px solid #4a421d; border-radius: 14px; object-fit: contain; }
+@keyframes carousel-slide { to { transform: translateX(calc(-50% - 8px)); } }
+@media (prefers-reduced-motion: reduce) { .carousel-track { animation: none; max-width: 100%; overflow-x: auto; } }

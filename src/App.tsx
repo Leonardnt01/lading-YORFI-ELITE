@@ -127,8 +127,9 @@ function MediaSection() {
       <div className="shell media-layout">
         <div className="media-copy">
           <p className="section-kicker">Conoce a Yorfi</p>
-          <h2 id="media-title">ESTE SOY YO</h2>
-          <p>Vivir del oro fue la mejor decisión que pude haber tomado. Tú también puedes empezar a ganar como yo. Únete a mi fiebre del oro.</p>
+          <h2 id="media-title">ESTE ERA YO</h2>
+          <p>Este era yo cuando era militar y ganaba 250 dólares al mes. Hoy vivo del negocio que un día solo era una idea en mi cabeza. Cuando veo esta foto, me acuerdo de dónde empecé y de todo lo que me tocó aprender para llegar hasta aquí.</p>
+          <p>Y si tú estás empezando, quiero decirte algo: tú también puedes construir algo propio. Empieza con lo que tienes, aprende en el camino y date tiempo para crecer. 🙏🏽</p>
           <TelegramLink section="media" buttonId="media_primary" />
         </div>
         <div className="portrait-card media-portrait-card">
@@ -149,6 +150,19 @@ function MediaSection() {
             <span>COMUNIDAD</span>
           </div>
         </div>
+      </div>
+    </section>
+  )
+}
+
+function ResultsCarousel() {
+  const images = Array.from({ length: 7 }, (_, index) => `/carousel-${index + 1}.png`)
+  return (
+    <section className="results-carousel" aria-label="Capturas compartidas por miembros de la comunidad">
+      <div className="carousel-track">
+        {[...images, ...images].map((src, index) => (
+          <img key={`${src}-${index}`} src={src} alt={index < 7 ? `Captura compartida ${index + 1}` : ''} aria-hidden={index >= 7} loading="lazy" />
+        ))}
       </div>
     </section>
   )
@@ -210,6 +224,7 @@ export default function App() {
       <Ticker />
       <main>
         <Hero />
+        <ResultsCarousel />
         <MediaSection />
         <Features />
         <FinalCta />
