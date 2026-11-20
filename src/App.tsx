@@ -113,7 +113,7 @@ function Hero() {
           preload="auto"
           aria-label="Video de presentación de YORFI ÉLITE GOLD CLUB"
         >
-          <source src="/yorfi-intro.mp4" type="video/mp4" />
+          <source src="/yorfi-intro-v2.mp4" type="video/mp4" />
           Tu navegador no puede reproducir este video.
         </video>
       </div>
@@ -134,9 +134,9 @@ function MediaSection() {
         <div className="portrait-card media-portrait-card">
           <img
             className="portrait-image"
-            src="/yorfi-portrait.webp"
-            width="960"
-            height="1280"
+            src="/yorfi-military.webp"
+            width="1187"
+            height="1600"
             alt="Retrato de la persona que presenta YORFI ÉLITE GOLD CLUB"
             loading="lazy"
           />

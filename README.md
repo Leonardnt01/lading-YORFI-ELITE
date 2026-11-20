@@ -35,7 +35,7 @@ Cuando tengas el ID numérico:
 
 ## Video y textos
 
-El video entregado aparece en la sección inicial y está en `public/yorfi-intro.mp4` (MP4 vertical de 36 segundos, 464 × 832, H.264/AAC, 6.22 MB). Se reproduce automáticamente y empieza silenciado para cumplir las políticas de reproducción de los navegadores; el visitante puede activar el sonido en los controles. La foto aparece junto a «ESTE SOY YO». Ambos se sirven como archivos estáticos, sin servicios externos. Los textos pueden modificarse en `src/App.tsx`.
+El video entregado aparece en la sección inicial y está en `public/yorfi-intro-v2.mp4` (MP4 de 7.4 MB). El nombre cambia en cada versión del video para que los navegadores no reutilicen una copia anterior en caché. Se reproduce automáticamente y empieza silenciado para cumplir las políticas de reproducción de los navegadores; el visitante puede activar el sonido en los controles. La foto aparece junto a «ESTE SOY YO». Ambos se sirven como archivos estáticos, sin servicios externos. Los textos pueden modificarse en `src/App.tsx`.
 
 ## Compartir y desplegar
 

@@ -16,7 +16,7 @@
     <clipPath id="photo"><rect x="735" y="0" width="465" height="630"/></clipPath>
   </defs>
   <rect width="1200" height="630" fill="#0c0c0c"/>
-  <image href="yorfi-portrait.webp" x="735" y="0" width="465" height="630" preserveAspectRatio="xMidYMid slice" clip-path="url(#photo)"/>
+  <image href="yorfi-military.webp"x="735" y="0" width="465" height="630" preserveAspectRatio="xMidYMid slice" clip-path="url(#photo)"/>
   <rect width="1200" height="630" fill="url(#shade)"/>
   <rect width="1200" height="630" fill="url(#grid)" opacity=".72"/>
   <rect x="66" y="54" width="62" height="62" rx="12" fill="#171607" stroke="#806b11" stroke-width="2"/>
